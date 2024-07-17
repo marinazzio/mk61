@@ -1,3 +1,5 @@
+# Solution
+
 cmake_minimum_required(VERSION 3.10)
 project(MK_61 VERSION 0.1)
 
