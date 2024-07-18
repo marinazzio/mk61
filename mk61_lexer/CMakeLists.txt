@@ -1,3 +1,25 @@
 project(mk_61_lexer)
 
-add_library(mk_61_lexer STATIC dllmain.cpp Preprocessor.cpp)
+include(FetchContent)
+FetchContent_Declare(
+	googletest
+	URL https://github.com/google/googletest/archive/9ff2450a56aed4f7f124f5104d9e3088bf791ee9.zip
+)
+
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(
+	mk61_lexer_tests
+	test/preprocessor_test.cc
+)
+target_link_libraries(
+	mk61_lexer_tests
+	GTest::gtest_main
+)
+include(GoogleTest)
+gtest_discover_tests(mk61_lexer_tests)
+
+# add_library(mk_61_lexer STATIC "src/dllmain.cpp" "src/Preprocessor.cpp")
