@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /build
 /mk61_lexer/build
+/mk61_lexer/Testing/Temporary
