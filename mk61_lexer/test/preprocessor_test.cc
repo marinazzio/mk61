@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "Preprocessor.h"
+#include "preprocessor.h"
 
 namespace lexer_common_suite {
 	TEST(General, ReturnsInputForPerfectInput) {
