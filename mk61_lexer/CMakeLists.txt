@@ -22,4 +22,4 @@ target_link_libraries(
 include(GoogleTest)
 gtest_discover_tests(mk61_lexer_tests)
 
-# add_library(mk_61_lexer STATIC "src/dllmain.cpp" "src/Preprocessor.cpp")
+add_library(mk_61_lexer STATIC "src/dllmain.cpp" "src/Preprocessor.cpp")
