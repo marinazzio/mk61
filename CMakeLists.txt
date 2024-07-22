@@ -8,4 +8,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 enable_testing()
 
+include(FetchContent)
+FetchContent_Declare(
+	googletest
+	URL https://github.com/google/googletest/archive/9ff2450a56aed4f7f124f5104d9e3088bf791ee9.zip
+)
+
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+add_subdirectory(cpu)
 add_subdirectory(mk61_lexer)
