@@ -1,0 +1,3 @@
+# Lexical preprocessing and tokenization
+
+The purpose of the lexer is to convert the input text into a sequence of tokens. Each token represents a single unit of the input text, such as a number, an operator, or a keyword. The lexer is responsible for identifying these units and converting them into a format that is easier to work with. It uses source text as an input and produces normalized tokens as an output. This is an optional module.
