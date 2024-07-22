@@ -14,7 +14,7 @@ The output interface is used to control the display.
 
 ### Stack
 
-The stack is used to store numbers. Default stack size is 4 (**X**, **Y**, **Z**, **T**) plus 1 (**X1**). The **X** value is always visible on the display.
+The stack is used to store numbers. Default stack size is 4 (**X**, **Y**, **Z**, **T**) plus (**X1**) to store the previous result. The **X** value is always visible on the display.
 
 ### Memory
 
