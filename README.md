@@ -6,15 +6,6 @@ Tools and core libraries for MK-61 calculator emulation.
 
 ## Scheme
 
-
-# MK-61 ecosystem
-
-## What is it?
-
-Tools and core libraries for MK-61 calculator emulation.
-
-## Scheme
-
     +-------------------+
     |      Memory       |
     +-------------------+           +-------------------+
@@ -37,7 +28,6 @@ Tools and core libraries for MK-61 calculator emulation.
     | |   Stack     |---|-----+---->| Output Controller |
     | +-------------+   |           +-------------------+
     +-------------------+
-
 
 
 ## How to use it?
