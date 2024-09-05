@@ -1,0 +1,10 @@
+<div class="output-container">
+    <input type="text" name="simple_display" @bind="KeyPressed" readonly /><label>Simple display</label>
+    <input type="text" name="keycode_pressed" @bind="KeyPressed" readonly /><label>Keycode pressed</label>
+</div>
+
+@code
+{
+    [Parameter]
+    public string KeyPressed { get; set; }
+}

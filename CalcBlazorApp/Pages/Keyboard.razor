@@ -1,0 +1,23 @@
+@using System.Diagnostics
+
+
+<div class="keyboard-container">
+    @for (int i = 1; i <= 30; i++)
+    {
+        var idx = i;
+        <button
+            class="keyboard-button button@(idx)"
+            @onclick="@(e => HandleKeyPress(e, idx.ToString()))"
+        />
+    }
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> OnKeyPress { get; set; }
+
+    private void HandleKeyPress(MouseEventArgs eventArgs, string id)
+    {
+        OnKeyPress.InvokeAsync(id);
+    }
+}
