@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<PageTitle>MK-61</PageTitle>
+
+<SystemCase OnKeyPress="HandleKeyPress" />
+<DebugOutput KeyPressed="@keyPressed" />
+
+@code {
+    private string keyPressed = "Initial";
+
+    private void HandleKeyPress(string key)
+    {
+        keyPressed = key;
+    }
+}

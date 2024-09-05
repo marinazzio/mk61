@@ -1,0 +1,18 @@
+<div class="system-case">
+    <img src="main_console.jpg" alt="Main Console" class="background-image" />
+    <div class="overlay-content">
+        <Display />
+        <Switches />
+        <Keyboard OnKeyPress="HandleKeyPress" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> OnKeyPress { get; set; }
+
+    private void HandleKeyPress(string key)
+    {
+        OnKeyPress.InvokeAsync(key);
+    }
+}

@@ -1,0 +1,26 @@
+﻿.switches-container {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    left: 31%; /* Adjust as needed */
+    width: 38%; /* Adjust as needed */
+    height: 10%; /* Adjust as needed */
+}
+
+.invisible-switch {
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 5%; /* Adjust width as needed */
+    height: 5%; /* Adjust height as needed */
+    cursor: pointer;
+}
+
+.switch-left {
+    top: 10%; /* Adjust as needed */
+    left: 10%; /* Adjust as needed */
+}
+
+.switch-right {
+    top: 20%; /* Adjust as needed */
+    left: 20%; /* Adjust as needed */
+}
