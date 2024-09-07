@@ -1,15 +1,27 @@
 ﻿@page "/"
 
+@using CalcBlazorCore.Models
+@using CalcBlazorApp.Services
+
+@inject KeyService KeyService
+
 <PageTitle>MK-61</PageTitle>
 
 <SystemCase OnKeyPress="HandleKeyPress" />
 <DebugOutput KeyPressed="@keyPressed" />
 
 @code {
-    private string keyPressed = "Initial";
+    private KeyInfo keyPressed;
 
-    private void HandleKeyPress(string key)
+    private async Task HandleKeyPress(string key)
     {
-        keyPressed = key;
+        try
+        {
+            keyPressed = await KeyService.GetInfoAsync(key);
+        }
+        catch (Exception ex)
+        {
+            keyPressed = new KeyInfo { Code = "EE" };
+        }
     }
 }
