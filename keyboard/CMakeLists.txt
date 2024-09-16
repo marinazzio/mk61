@@ -1,6 +1,6 @@
 project(keyboard)
 
-add_library(keyboard STATIC src/keyboard.cpp)
+add_library(keyboard STATIC src/Keyboard.cpp)
 
 target_include_directories(keyboard PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 

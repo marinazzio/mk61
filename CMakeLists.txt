@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 enable_testing()
+find_package(GTest CONFIG REQUIRED)
 
 include(FetchContent)
 FetchContent_Declare(

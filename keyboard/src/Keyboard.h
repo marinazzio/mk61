@@ -9,5 +9,8 @@ public:
 	property bool IsFPressed;
     property bool IsKPressed;
 
+	property uint8_t CmdBuffer;
+
     int GetCodeByKeyPosition(int keyPosition);
+	void PressByPosition(int keyPosition);
 };
