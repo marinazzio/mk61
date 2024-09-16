@@ -16,9 +16,7 @@ set(HEADERS
 
 add_executable(keyboard_test test/keyboard_test.cpp)
 
-set_source_files_properties(
-	src/Keyboard.cpp PROPERTIES COMPILE_FLAGS "/clr"
-)
+set_target_properties(keyboard_test PROPERTIES COMPILE_FLAGS "/clr")
 
 target_link_libraries(keyboard_test keyboard GTest::gtest_main)
 
