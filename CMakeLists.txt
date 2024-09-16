@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 enable_testing()
-find_package(GTest CONFIG REQUIRED)
+# find_package(GTest CONFIG REQUIRED)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -18,6 +18,4 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_subdirectory(cpu)
 add_subdirectory(keyboard)
-add_subdirectory(mk61_lexer)
