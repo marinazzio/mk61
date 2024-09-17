@@ -1,10 +1,27 @@
+@using CalcBlazorCore.Models;
+
 <div class="output-container">
-    <input type="text" name="simple_display" @bind="KeyPressed" readonly /><label>Simple display</label>
-    <input type="text" name="keycode_pressed" @bind="KeyPressed" readonly /><label>Keycode pressed</label>
+    <InputTextArea @bind-Value="keyInfoString" /><label>Pressed key info</label>
+    <input type="text" name="simple_display" @bind="KeyPressed.Code" readonly /><label>Simple display</label>
+    <input type="text" name="keycode_pressed" @bind="KeyPressed.PreparedFunction" readonly /><label>Keycode pressed</label>
 </div>
 
 @code
 {
+    private KeyInfo _keyPressed = new KeyInfo { Code = "00" };
+
     [Parameter]
-    public string KeyPressed { get; set; }
+    public KeyInfo KeyPressed {
+        get => _keyPressed;
+        set {
+            if (value != null)
+            {
+                _keyPressed = value;
+                keyInfoString = value.ToString();
+            }
+        }
+    }
+
+
+    private string keyInfoString;
 }
