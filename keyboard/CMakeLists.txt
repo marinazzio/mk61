@@ -1,16 +1,16 @@
 project(keyboard)
 
 set(SOURCES
-	src/Keyboard.cpp
+    src/Keyboard.cpp
 )
 
 set(HEADERS
-	src/Keyboard.h
-	src/Instructions.h
-	src/KeyPositions.h
+    src/Keyboard.h
+    src/Instructions.h
+    src/KeyPositions.h
 )
 
-add_library(keyboard STATIC ${SOURCES} ${HEADERS})
+add_library(keyboard SHARED ${SOURCES} ${HEADERS})
 set_target_properties(keyboard PROPERTIES COMPILE_FLAGS "/clr")
 target_include_directories(keyboard PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
